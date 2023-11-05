@@ -1,3 +1,6 @@
+import random
+import time
+import pygame
 message = 'Hello, World!'
 print(message)
 
@@ -7,12 +10,8 @@ print(message)
 # 3. git push origin main
 
 
-
-
 # importing libraries
-import pygame
-import time
-import random
+
 
 snake_speed = 15
 
@@ -128,7 +127,7 @@ while True:
             if event.key == pygame.K_RIGHT:
                 change_to = 'RIGHT'
 
-    # If two keys pressed simultaneously
+    # If two keys pressed simultaneous=ly
     # we don't want snake to move into two
     # directions simultaneously
     if change_to == 'UP' and direction != 'DOWN':
@@ -191,4 +190,5 @@ while True:
     pygame.display.update()
 
     # Frame Per Second /Refresh Rate
+    
     fps.tick(snake_speed)
